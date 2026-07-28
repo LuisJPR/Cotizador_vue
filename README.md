@@ -1,21 +1,32 @@
 # 💱 Cotizador de Divisas
 
-Aplicación web desarrollada con **Vue 3**, **TypeScript**, **Pinia**, **Tailwind CSS** y **Firebase Firestore** que permite cotizar la compra y venta de dólares y soles en tiempo real.
+## 📷 Vista previa
 
-## 📌 Características
+![Vista previa](./public/preview.png)
 
-- Conversión de **Soles ↔ Dólares**.
-- Actualización automática de las tasas mediante **Firebase Firestore**.
-- Cambio entre **Compra** y **Venta**.
-- Conversión bidireccional (ambos campos son editables).
-- Validación de entradas numéricas.
-- Interfaz responsive basada en el diseño proporcionado en Figma.
-- Estado global implementado con **Pinia**.
-- Código modular y documentado.
+Aplicación web desarrollada con **Vue 3**, **TypeScript**, **Pinia**, **Tailwind CSS** y **Firebase Firestore**, que permite realizar conversiones entre **Soles (PEN)** y **Dólares (USD)** utilizando tasas de cambio actualizadas en tiempo real.
+
+## 🚀 Demo
+
+- **Aplicación desplegada:** https://tipodecambio.netlify.app/
+- **Repositorio:** https://github.com/LuisJPR/Cotizador_vue
 
 ---
 
-## 🚀 Tecnologías utilizadas
+## 📌 Características
+
+- ✅ Conversión de **Soles ↔ Dólares**.
+- ✅ Actualización automática de tasas mediante **Firebase Firestore**.
+- ✅ Cambio entre modo **Compra** y **Venta**.
+- ✅ Conversión bidireccional (ambos campos son editables).
+- ✅ Validación de entradas numéricas.
+- ✅ Interfaz responsive basada en el diseño proporcionado en Figma.
+- ✅ Estado global implementado con **Pinia**.
+- ✅ Código modular siguiendo separación de responsabilidades.
+
+---
+
+## 🛠️ Tecnologías utilizadas
 
 - Vue 3
 - TypeScript
@@ -30,14 +41,15 @@ Aplicación web desarrollada con **Vue 3**, **TypeScript**, **Pinia**, **Tailwin
 
 ## 📂 Estructura del proyecto
 
-```
+```text
 src/
 │
+├── assets/
 ├── components/
-│   ├── HeroSection.vue
-│   ├── ExchangeCard.vue
-│   ├── RateTabs.vue
 │   ├── CurrencyField.vue
+│   ├── ExchangeCard.vue
+│   ├── HeroSection.vue
+│   ├── RateTabs.vue
 │   └── SwapButton.vue
 │
 ├── firebase/
@@ -48,8 +60,6 @@ src/
 │
 ├── stores/
 │   └── exchange.ts
-│
-├── assets/
 │
 ├── App.vue
 └── main.ts
@@ -62,13 +72,13 @@ src/
 Clonar el repositorio:
 
 ```bash
-git clone https://github.com/TU_USUARIO/cotizador-vue.git
+git clone https://github.com/LuisJPR/Cotizador_vue.git
 ```
 
-Entrar al proyecto:
+Ingresar al proyecto:
 
 ```bash
-cd cotizador-vue
+cd Cotizador_vue
 ```
 
 Instalar dependencias:
@@ -81,9 +91,7 @@ npm install
 
 ## 🔐 Variables de entorno
 
-Crear un archivo `.env` en la raíz del proyecto utilizando como referencia el archivo `.env.example`.
-
-Completar las siguientes variables:
+Crear un archivo `.env` tomando como referencia el archivo `.env.example`.
 
 ```env
 VITE_FIREBASE_API_KEY=
@@ -96,13 +104,13 @@ VITE_FIREBASE_APP_ID=
 
 ---
 
-## ▶️ Ejecutar en desarrollo
+## ▶️ Ejecutar el proyecto
 
 ```bash
 npm run dev
 ```
 
-La aplicación estará disponible en:
+Abrir en el navegador:
 
 ```
 http://localhost:5173
@@ -110,13 +118,13 @@ http://localhost:5173
 
 ---
 
-## 📦 Generar versión de producción
+## 📦 Compilar para producción
 
 ```bash
 npm run build
 ```
 
-Para previsualizar la versión compilada:
+Vista previa de producción:
 
 ```bash
 npm run preview
@@ -124,17 +132,17 @@ npm run preview
 
 ---
 
-## 📖 Funcionalidad
+## 📖 Funcionamiento
 
 ### Compra de dólares
 
-```
+```text
 Monto en dólares × purchase_price = Monto en soles
 ```
 
 ### Venta de dólares
 
-```
+```text
 Monto en soles ÷ sale_price = Monto en dólares
 ```
 
@@ -142,16 +150,20 @@ Las tasas de cambio son obtenidas desde **Firebase Firestore** y se actualizan a
 
 ---
 
-## 🌐 Despliegue
+## 📝 Notas
 
-La aplicación se encuentra desplegada en:
+Este proyecto fue desarrollado como parte de una prueba técnica implementando los siguientes requisitos:
 
-**Netlify**
-
-(Agregar enlace una vez publicado)
+- Vue 3 + TypeScript
+- Pinia para manejo de estado
+- Tailwind CSS
+- Firebase Firestore
+- Actualización de tasas en tiempo real
+- Comunicación entre componentes
+- Diseño responsive basado en Figma
 
 ---
 
 ## 👨‍💻 Autor
 
-Luis Pacherrez
+**Luis Pacherrez**
