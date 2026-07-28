@@ -1,48 +1,157 @@
-# Cotizador
+# 💱 Cotizador de Divisas
 
-This template should help get you started developing with Vue 3 in Vite.
+Aplicación web desarrollada con **Vue 3**, **TypeScript**, **Pinia**, **Tailwind CSS** y **Firebase Firestore** que permite cotizar la compra y venta de dólares y soles en tiempo real.
 
-## Recommended IDE Setup
+## 📌 Características
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Conversión de **Soles ↔ Dólares**.
+- Actualización automática de las tasas mediante **Firebase Firestore**.
+- Cambio entre **Compra** y **Venta**.
+- Conversión bidireccional (ambos campos son editables).
+- Validación de entradas numéricas.
+- Interfaz responsive basada en el diseño proporcionado en Figma.
+- Estado global implementado con **Pinia**.
+- Código modular y documentado.
 
-## Recommended Browser Setup
+---
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## 🚀 Tecnologías utilizadas
 
-## Type Support for `.vue` Imports in TS
+- Vue 3
+- TypeScript
+- Vite
+- Pinia
+- Tailwind CSS
+- Firebase Firestore
+- SweetAlert2
+- Lucide Vue Next
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+---
 
-## Customize configuration
+## 📂 Estructura del proyecto
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+```
+src/
+│
+├── components/
+│   ├── HeroSection.vue
+│   ├── ExchangeCard.vue
+│   ├── RateTabs.vue
+│   ├── CurrencyField.vue
+│   └── SwapButton.vue
+│
+├── firebase/
+│   └── firebase.ts
+│
+├── services/
+│   └── exchangeService.ts
+│
+├── stores/
+│   └── exchange.ts
+│
+├── assets/
+│
+├── App.vue
+└── main.ts
+```
 
-## Project Setup
+---
 
-```sh
+## ⚙️ Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/TU_USUARIO/cotizador-vue.git
+```
+
+Entrar al proyecto:
+
+```bash
+cd cotizador-vue
+```
+
+Instalar dependencias:
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+---
 
-```sh
+## 🔐 Variables de entorno
+
+Crear un archivo `.env` en la raíz del proyecto utilizando como referencia el archivo `.env.example`.
+
+Completar las siguientes variables:
+
+```env
+VITE_FIREBASE_API_KEY=
+VITE_FIREBASE_AUTH_DOMAIN=
+VITE_FIREBASE_PROJECT_ID=
+VITE_FIREBASE_STORAGE_BUCKET=
+VITE_FIREBASE_MESSAGING_SENDER_ID=
+VITE_FIREBASE_APP_ID=
+```
+
+---
+
+## ▶️ Ejecutar en desarrollo
+
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+La aplicación estará disponible en:
 
-```sh
+```
+http://localhost:5173
+```
+
+---
+
+## 📦 Generar versión de producción
+
+```bash
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+Para previsualizar la versión compilada:
 
-```sh
-npm run lint
+```bash
+npm run preview
 ```
+
+---
+
+## 📖 Funcionalidad
+
+### Compra de dólares
+
+```
+Monto en dólares × purchase_price = Monto en soles
+```
+
+### Venta de dólares
+
+```
+Monto en soles ÷ sale_price = Monto en dólares
+```
+
+Las tasas de cambio son obtenidas desde **Firebase Firestore** y se actualizan automáticamente mediante un listener en tiempo real (`onSnapshot`).
+
+---
+
+## 🌐 Despliegue
+
+La aplicación se encuentra desplegada en:
+
+**Netlify**
+
+(Agregar enlace una vez publicado)
+
+---
+
+## 👨‍💻 Autor
+
+Luis Pacherrez
