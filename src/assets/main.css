@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+:root {
+  --primary: #6e46e6;
+  --primary-dark: #4a28af;
+
+  --secondary: #2f00ff;
+
+  --text-primary: #3d3d67;
+  --text-secondary: #717191;
+
+  --border: #e7e7ed;
+  --surface: #f3f3f6;
+}
